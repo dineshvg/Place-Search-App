@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">LocationObtain</string>
+    <string name="API_KEY">SetUpApiKeyForAutoPlaceCompleteAndGeoCoding</string>
+    <string name="location_obtain">Location Obtain</string>
+    <string name="general_continue">END</string>
+    <string name="from">from</string>
+    <string name="to">to</string>
+    <string name="location_permission">android.permission.ACCESS_FINE_LOCATION</string>
+</resources>

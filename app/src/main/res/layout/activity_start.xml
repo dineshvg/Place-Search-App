@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartActivity">
+
+    <TextView
+        android:id="@+id/title_start_textView"
+        style="@style/Text.Big"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/margin_default"
+        android:gravity="center"
+        android:text="@string/location_obtain"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        mapbox:layout_constraintStart_toStartOf="parent"
+        mapbox:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/start_locationHolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_default"
+        android:background="@drawable/simple_border"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_default"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        mapbox:layout_constraintStart_toStartOf="parent"
+        mapbox:layout_constraintTop_toBottomOf="@+id/title_start_textView">
+
+        <TextView
+            android:id="@+id/from_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/from" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/start_location_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:hint="Origin"
+                android:gravity="center_vertical"
+                android:minLines="3" />
+
+            <ImageView
+                android:id="@+id/start_imageView"
+                android:layout_width="@dimen/place_holder_size"
+                android:layout_height="@dimen/place_holder_size"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.2"
+                android:src="@drawable/gps"
+                android:tint="@color/colorPrimary" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/end_locationHolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_default"
+        android:background="@drawable/simple_border"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_default"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        mapbox:layout_constraintStart_toStartOf="parent"
+        mapbox:layout_constraintTop_toBottomOf="@+id/start_locationHolder">
+
+        <TextView
+            android:id="@+id/to_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/to" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/end_location_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:gravity="center_vertical"
+                android:hint="Destination"
+                android:minLines="3" />
+
+            <ImageView
+                android:id="@+id/end_imageView"
+                android:layout_width="@dimen/place_holder_size"
+                android:layout_height="@dimen/place_holder_size"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.2"
+                android:src="@drawable/gps"
+                android:tint="@color/colorPrimary" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.jpardogo.android.googleprogressbar.library.GoogleProgressBar
+        android:id="@+id/google_progress_bar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:visibility="invisible"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/margin_default"
+        mapbox:type="chrome_floating_circles"
+        mapbox:layout_constraintBottom_toTopOf="@+id/end_holder"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        mapbox:layout_constraintStart_toStartOf="parent"
+        mapbox:layout_constraintTop_toBottomOf="@+id/end_locationHolder" />
+
+    <!--ALIGN PARENT BOTTOM STYLE-->
+    <FrameLayout
+        android:id="@+id/end_holder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_default"
+        mapbox:layout_constraintBottom_toBottomOf="parent"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        mapbox:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/end_button"
+            style="@style/Button.Continue"
+            android:layout_marginTop="@dimen/margin_default"
+            android:text="@string/general_continue"
+            mapbox:layout_constraintBottom_toBottomOf="parent"
+            mapbox:layout_constraintEnd_toEndOf="parent"
+            mapbox:layout_constraintStart_toStartOf="parent" />
+
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>

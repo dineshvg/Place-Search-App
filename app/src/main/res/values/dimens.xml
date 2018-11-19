@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_default">24dp</dimen>
+    <dimen name="text_big">24sp</dimen>
+    <dimen name="stroke_width">2dp</dimen>
+    <dimen name="place_holder_size">30dp</dimen>
+    <dimen name="padding_default">10dp</dimen>
+    <dimen name="continueButton_height">50dp</dimen>
+</resources>
